@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="Experiential Elective Login System" name="description" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="Lagisetty Ravikiran" name="author" />
+        <title>Student Login for the Experiential Courses</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: black;
+            }
+    
+            #container {
+                display: flex;
+                height: 100vh; /* 100% of the viewport height */
+            }
+    
+            #image-container {
+                flex: 1; /* Take up 50% of the container */
+                position: relative;
+            }
+    
+            #image {
+                width: 100%; /* Make the image take up the full width of its container */
+                height: 100vh; /* Make the image take up the full height of the viewport */
+                object-fit: cover; /* Ensure the image covers the entire container */
+            }
+            #logo {
+                position: absolute;
+                top: 10px; /* Adjust top position as needed */
+                left: 10px; /* Adjust left position as needed */
+                width: 120px; /* Set the width of the logo */
+                height: auto; /* Maintain aspect ratio */
+            }
+            #logo-text {
+                position: absolute;
+                top: 10px; 
+                left: 130px; 
+                color: black; 
+                font-size: 35.5px; 
+                font-family: 'Arial', sans-serif; 
+                opacity: 0; /* Start with 0 opacity */
+                animation: fadeIn 1s ease-in-out forwards; 
+                transition: color 0.3s ease-in-out; 
+            }
+            
+            #logo-text:hover {
+                color: black; /* Change the color on hover */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow on hover */
+            }
+            
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            #content {
+                flex: 1;
+                padding: 20px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: black; /* Light background color */
+                border-radius: 10px; /* Rounded corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+                opacity: 0; /* Start with 0 opacity */
+                animation: fadeIn 1s ease-in-out forwards; 
+                transition: color 0.3s ease-in-out; 
+            }
+            
+            #logo-text:hover {
+                color: black; /* Change the color on hover */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow on hover */
+            }
+            
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            
+            h1 {
+                text-align: center;
+                color: white; /* Blue color for the heading */
+            }
+            
+            p {
+                text-align: center;
+                color: white;
+            }
+            
+            label {
+                display: block;
+                margin: 10px 0 5px;
+                color: white;
+            }
+            
+            input {
+                width: 100%;
+                padding: 10px; 
+                margin-bottom: 15px; 
+                box-sizing: border-box;
+                border: 1px solid #ddd; 
+                border-radius: 5px; 
+            }
+            #login-form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%; 
+            }
+    
+            #login-form label,
+            #login-form input {
+                width: calc(50% - 10px); /* Adjust width based on your preference, considering margin */
+                margin-bottom: 10px;
+                box-sizing: border-box;
+            }    
+            
+            button {
+                display: block;
+                margin: 0 auto;
+                width: 20%;
+                padding: 10px; 
+                background-color: white;
+                color: black;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease-in-out;
+                font-family: 'Arial', sans-serif; 
+            }
+            
+            button:hover {
+                background-color: #45a049;
+            }
+            
+        </style>
+</head>
+<body>
+    <div id="container">
+        <div id="image-container">
+            <img id="image" src="img3.jpg" alt="Description of your image">
+            <img id="logo" src="logo.png" alt="Logo">
+            <span id="logo-text">KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION</span>
+        </div>
+        <div id="content">
+        <h1>Login for CSE Department Experiential Courses</h1>
+          <p>Student Information System - CSE Department Experiential Courses</p>
+          <form id="login-form">
+            <label for="login-number">Registration No:</label>
+            <input type="text" id="login-number" name="login-number" required>
+    
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+    
+            <button type="submit">Login</button>
+        </form>
+        </div>
+    </div>
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); 
+            var username = document.getElementById("login-number").value;
+            var password = document.getElementById("login-password").value;
+            var validUsername = "yourValidUsername"; 
+            var validPassword = "yourValidPassword"; 
+
+            if (username === validUsername && password === validPassword) {
+                alert("Login successful!"); 
+            } else {
+                alert("Incorrect username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+
+</html>

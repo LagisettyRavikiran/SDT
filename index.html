@@ -11,7 +11,7 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: black;
+                background-color: white;
             }
     
             #container {
@@ -35,6 +35,13 @@
                 left: 10px; /* Adjust left position as needed */
                 width: 120px; /* Set the width of the logo */
                 height: auto; /* Maintain aspect ratio */
+            }
+            #kareoss {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 120px;
+                height: auto;
             }
             #logo-text {
                 position: absolute;
@@ -69,7 +76,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                background-color: black; /* Light background color */
+                background-color: white; /* Light background color */
                 border-radius: 10px; /* Rounded corners */
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
                 opacity: 0; /* Start with 0 opacity */
@@ -93,18 +100,18 @@
             
             h1 {
                 text-align: center;
-                color: white; /* Blue color for the heading */
+                color: black; /* Blue color for the heading */
             }
             
             p {
                 text-align: center;
-                color: white;
+                color: black;
             }
             
             label {
                 display: block;
                 margin: 10px 0 5px;
-                color: white;
+                color: black;
             }
             
             input {
@@ -134,8 +141,8 @@
                 margin: 0 auto;
                 width: 20%;
                 padding: 10px; 
-                background-color: white;
-                color: black;
+                background-color: black;
+                color: white;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
@@ -159,6 +166,7 @@
         <div id="content">
         <h1>Login for CSE Department Experiential Courses</h1>
           <p>Student Information System - CSE Department Experiential Courses</p>
+          <img id="kareoss" src="kareoss.png" alt="kareoss">
           <form id="login-form">
             <label for="login-number">Registration No:</label>
             <input type="text" id="login-number" name="login-number" required>
@@ -175,8 +183,8 @@
             event.preventDefault(); 
             var username = document.getElementById("login-number").value;
             var password = document.getElementById("login-password").value;
-            var validUsername = "yourValidUsername"; 
-            var validPassword = "yourValidPassword"; 
+            var validUsername = "99210041072"; 
+            var validPassword = "99210041072"; 
 
             if (username === validUsername && password === validPassword) {
                 alert("Login successful!"); 
